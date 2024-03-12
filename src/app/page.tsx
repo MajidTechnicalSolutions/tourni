@@ -1,29 +1,40 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
-          Current Match&nbsp;
+          Current&nbsp;
           <code className={styles.code}>
             {" "}
             Jamal <span className={styles.vs}>VS</span> Matt{" "}
           </code>
         </p>
         <div>
-          <a href="https://muhaaryb.com/" target="_blank">
-            By{" "}
-            <Image
-              src="/Muhaaryb.png"
-              alt="Muhaaryb Logo"
-              className={styles.muhaarybLogo}
-              width={50}
-              height={25}
-              priority
-            />
-          </a>
+          <div className={styles.score}>
+            {" "}
+            <span className={styles.scoreRed}>4</span>
+            <span> - </span>
+            <span className={styles.scoreBlue}>7</span>{" "}
+          </div>
+        </div>
+        <div>
+          <p>
+            <a href="https://muhaaryb.com/" target="_blank">
+              By{" "}
+              <Image
+                src="/Muhaaryb.png"
+                alt="Muhaaryb Logo"
+                className={styles.muhaarybLogo}
+                width={50}
+                height={25}
+                priority
+              />
+            </a>
+          </p>
         </div>
       </div>
 
@@ -39,33 +50,33 @@ export default function Home() {
       </div>
 
       <div className={styles.grid}>
-        <a href="" className={styles.card}>
+        <Link href="/score" className={styles.card}>
           <h2>
             Score <span>-&gt;</span>
           </h2>
           <p>Keep track of your matches scores.</p>
-        </a>
+        </Link>
 
-        <a href="" className={styles.card}>
+        <Link href="" className={styles.card}>
           <h2>
             Brackets <span>-&gt;</span>
           </h2>
           <p>See current brackets.</p>
-        </a>
+        </Link>
 
-        <a href="" className={styles.card}>
+        <Link href="" className={styles.card}>
           <h2>
             Prizes <span>-&gt;</span>
           </h2>
           <p> Put up grand prizes for for first, second, & third place!</p>
-        </a>
+        </Link>
 
-        <a href="https://muhaaryb.com/" className={styles.card} target="_blank">
+        <Link href="https://muhaaryb.com/" className={styles.card} target="_blank">
           <h2>
             Shop <span>-&gt;</span>
           </h2>
           <p>Shop everything you need for the next match.</p>
-        </a>
+        </Link>
       </div>
     </main>
   );

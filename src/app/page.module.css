@@ -53,9 +53,10 @@
 .card {
   padding: 1rem 1.2rem;
   border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
+  background: rgba(var(--card-rgb), 0.1);
+  border: 1px solid rgba(var(--card-border-rgb), 0.15);
   transition: background 200ms, border 200ms;
+  margin: 1rem;
 }
 
 .card span {
@@ -119,12 +120,23 @@
   border: 1px solid rgba(var(--card-border-rgb), 0.15);
 }
 
+.score {
+  font-size: x-large;
+  margin-right: 5rem;
+}
 
+.scoreRed {
+  color: red;
+}
+
+.scoreBlue {
+  color: Blue;
+}
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+    /* background: rgba(var(--card-rgb), 0.1);
+    border: 1px solid rgba(var(--card-border-rgb), 0.15); */
   }
 
   .card:hover span {
